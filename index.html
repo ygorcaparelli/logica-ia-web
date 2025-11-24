@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho UNIFACEF – Lógica Proposicional</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Trabalho UNIFACEF – Lógica Proposicional</h1>
+        <p>Agente de IA para Tradução NL ↔ Cálculo Proposicional</p>
+    </header>
+
+    <main class="container">
+
+        <!-- CARD DE DESCRIÇÃO -->
+        <section class="card">
+            <h2>Visão Geral</h2>
+            <p>Este agente traduz frases em português (NL) para fórmulas do Cálculo Proposicional Clássico (CPC) e também realiza a tradução reversa.</p>
+            <p class="mini">Conectivos suportados: ¬, ∧, ∨, →, ↔</p>
+        </section>
+
+        <!-- CARD DAS ABAS -->
+        <section class="card">
+
+            <!-- TABS -->
+            <div class="tabs">
+                <button class="tab active" data-tab="nl">NL → CPC</button>
+                <button class="tab" data-tab="cpc">CPC → NL</button>
+            </div>
+
+            <!-- PAINEL NL -> CPC -->
+            <div class="panel" id="panel-nl">
+                <label for="nlInput">Frase em português:</label>
+                <textarea id="nlInput" placeholder="Ex: Se chover, então a grama ficará molhada."></textarea>
+
+                <button id="btnNlToCpc" class="btn">Traduzir</button>
+
+                <div id="nlOutput" class="output"></div>
+            </div>
+
+            <!-- PAINEL CPC -> NL -->
+            <div class="panel hidden" id="panel-cpc">
+                <label for="cpcInput">Fórmula proposicional:</label>
+                <textarea id="cpcInput" placeholder="Ex: (P ∧ Q) → R"></textarea>
+
+                <div id="varContainer" class="var-container"></div>
+
+                <button id="btnCpcToNl" class="btn">Gerar frase</button>
+
+                <div id="cpcOutput" class="output"></div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        © Desenvolvido para UNIFACEF – Inteligência Artificial · Lógica Proposicional
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
